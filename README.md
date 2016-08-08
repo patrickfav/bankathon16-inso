@@ -7,6 +7,8 @@ It was a 2 day event, 3 developer worked on the project. This project achieved 2
 
 ## Use Cases
 
+This is basically a specialized payment and send money app with added functionality to provide this service to a minor with the parents supervision.
+
 ### Adding children
 An envisioned app for the parents contains an administrative UI where a child can be registrated.
 To do this the the parents mobile phone communicates through NFC with the child's app, automatically
