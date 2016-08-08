@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Geldbörsel</string>
+    <string name="games">Spielwaren</string>
+    <string name="school">Schulbedarf</string>
+    <string name="food">Lebensmittel</string>
+    <string name="enter_amount_success">Der Betrag wurde erfolgreich übermittelt.</string>
+    <string name="enter_amount_failure">Ein unbekannter Fehler ist aufgetreten.</string>
+    <string name="enter_amount_wrong_number">Bitte geben Sie einen Betrag ein.</string>
+    <string name="enter_amount_send_money_to_name">Betrag senden an %s</string>
+    <string name="berweisung_w_chentlich_wiederholen_n_jeden_montag">Überweisung wöchentlich wiederholen\n(jeden Montag)</string>
+    <string name="sparziel">Für was sparst du?</string>
+    <string name="server_error_create_child">Sorry, da ging was schief.</string>
+    <string name="wie_viel_kostet_das">Wie viel kostet das?</string>
+    <string name="not_enough_money">Du hast leider nicht soviel Geld :(.</string>
+</resources>

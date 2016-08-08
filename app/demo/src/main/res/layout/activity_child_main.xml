@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/childFancyBg"
+    tools:context=".childapp.ChildMainActivity">
+
+    <ImageView
+        android:id="@+id/iv_sparsau"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.05"
+        android:src="@drawable/ic_piggy_bank" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_include"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:title="@string/app_name" />
+
+    <TextView
+        android:id="@+id/sum_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_sum_add"
+        android:alpha="0.8"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:paddingBottom="0dp"
+        android:text="So viel kannst du ausgeben:"
+        android:textColor="@color/childFancyFg"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/tv_sum_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_sum"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        android:fontFamily="sans-serif-thin"
+        android:text="23,50 €"
+        android:textColor="@color/childFancyFg"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/tv_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="@color/childFancyFg"
+        android:textSize="86sp"
+        tools:text="23,50 €" />
+
+    <Button
+        android:id="@+id/btn_pay"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/tv_sum"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:drawableLeft="@drawable/ic_pay_cash_white"
+        android:drawablePadding="-12dp"
+        android:drawableTint="#fff"
+        android:gravity="center"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:text="Zahlen"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_pay"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Neues Spar-Ziel"
+        android:textSize="18sp" />
+</RelativeLayout>

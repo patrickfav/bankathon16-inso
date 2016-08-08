@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/root_content"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".parentsapp.ParentMainActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <at.favre.app.bankathon16.view.AppBarLayoutWidget
+            android:id="@+id/appbar"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/parentFancyBg"
+                app:collapsedTitleTextAppearance="@style/CollapsedTitleTextAppearance"
+                app:contentScrim="@color/colorPrimaryParent"
+                app:expandedTitleMarginBottom="16dp"
+                app:expandedTitleMarginStart="16dp"
+                app:expandedTitleTextAppearance="@style/ExpandedTitleTextAppearance"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="parallax">
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/container_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/card_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:paddingBottom="32dp"
+                                android:paddingTop="32dp"
+                                android:src="@drawable/img_credit_card"/>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+                </FrameLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:titleTextAppearance="?android:textAppearanceSmall"/>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </at.favre.app.bankathon16.view.AppBarLayoutWidget>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerChildren"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="10dp"
+            android:paddingTop="30dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <TextView
+            android:id="@+id/recyclerChildrenEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Keine Kinder eingetragen"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:clickable="true"
+            android:scaleType="center"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            android:src="@drawable/ic_person_add_white_36dp"
+            app:backgroundTint="@color/colorAccentParent"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:layout_anchor="@+id/collapsing_toolbar"
+            app:layout_anchorGravity="bottom|right|end"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+</FrameLayout>

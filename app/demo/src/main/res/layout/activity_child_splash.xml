@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/childFancyBg"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_hallo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:paddingTop="100dp"
+            android:text="Hallo!"
+            android:textColor="@color/childFancyFg"
+            android:textSize="86sp" />
+
+        <TextView
+            android:id="@+id/tv_line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hallo"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:paddingTop="64dp"
+            android:text="Ich bin dein erstes Geldbörsel."
+            android:textColor="@color/childFancyFg"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tv_line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_line1"
+            android:alpha="0.7"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="Registriere mich bei deinen Eltern."
+            android:textColor="@color/childFancyFg"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/iv_sparsau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_line2"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.3"
+            android:paddingTop="32dp"
+            android:src="@drawable/ic_piggy_bank" />
+    </RelativeLayout>
+</FrameLayout>

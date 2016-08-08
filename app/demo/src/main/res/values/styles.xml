@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="ChildAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryChild</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkChild</item>
+        <item name="colorAccent">@color/colorAccentChild</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="actionMenuTextColor">#fff</item>
+        <item name="android:textColorSecondary">#fff</item>
+    </style>
+
+    <style name="ParentAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryParent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkParent</item>
+        <item name="colorAccent">@color/colorAccentParent</item>
+    </style>
+
+    <style name="CollapsedTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ExpandedTitleTextAppearance" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <!-- Default theme for alert dialog. -->
+    <style name="ParentAppTheme.AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccentParent</item>
+        <item name="android:alertDialogStyle">@style/ParentAlertDialogStyle</item>
+    </style>
+
+    <style name="ParentAlertDialogStyle">
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomDark">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:centerDark">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:fullBright">@android:color/transparent</item>
+        <item name="android:fullDark">@android:color/transparent</item>
+        <item name="android:topBright">@android:color/transparent</item>
+        <item name="android:topDark">@android:color/transparent</item>
+    </style>
+
+</resources>

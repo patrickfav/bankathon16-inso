@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryChild">#E91E63</color>
+    <color name="colorPrimaryDarkChild">#C2185B</color>
+    <color name="colorAccentChild">#303F9F</color>
+    <color name="childFancyBg">#F06292</color>
+    <color name="childFancyFg">#E3F2FD</color>
+
+    <color name="colorPrimaryParent">#3854b0</color>
+    <color name="colorPrimaryDarkParent">#222f84</color>
+    <color name="colorAccentParent">#880E4F</color>
+    <color name="parentFancyBg">#acc9ed</color>
+    <color name="parentFancyFg">#E3F2FD</color>
+</resources>

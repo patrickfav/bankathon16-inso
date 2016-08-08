@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#424cba"
+                android:orientation="vertical"
+                android:padding="16dp"
+                tools:context=".parentsapp.NfcRegisterChildActivity">
+
+    <TextView
+        android:id="@+id/tv_hallo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:paddingTop="80dp"
+        android:text="Registrieren"
+        android:textColor="@color/parentFancyFg"
+        android:textSize="46sp"/>
+
+    <RelativeLayout
+        android:id="@+id/icon_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.3"
+            android:paddingTop="32dp"
+            android:src="@drawable/ic_device_hand"/>
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_alignParentRight="true"
+            android:scaleX="-1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.3"
+            android:paddingTop="32dp"
+            android:src="@drawable/ic_device_hand"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon_container"
+        android:alpha="0.5"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:paddingTop="64dp"
+        android:text="Halten Sie Ihr Smartphone an das Ihres Kindes."
+        android:textColor="@color/parentFancyFg"
+        android:textSize="24sp"/>
+</RelativeLayout>

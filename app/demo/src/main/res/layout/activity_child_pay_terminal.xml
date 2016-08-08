@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/childFancyBg"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_hallo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:paddingTop="100dp"
+            android:text="Zahlung"
+            android:textColor="@color/childFancyFg"
+            android:textSize="64sp"/>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="32dp"
+            android:layout_centerInParent="true"
+            android:alpha="0.3"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_contactless_payment"/>
+
+        <TextView
+            android:layout_below="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:paddingTop="64dp"
+            android:alpha="0.5"
+            android:text="Halte das Handy an die Kassa."
+            android:textColor="@color/childFancyFg"
+            android:textSize="24sp"/>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="at.favre.app.bankathon16"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true"/>
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE"/>
+
+    <application
+        android:name=".BankathonApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/ChildAppTheme">
+
+        <!-- CHILD APP -->
+        <activity
+            android:name=".childapp.ChildSplashActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChildAppTheme">
+            <intent-filter
+                android:icon="@mipmap/ic_launcher"
+                android:label="Mein Erstes Geldbörsel">
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".childapp.ChildMainActivity"
+            android:launchMode="singleInstance"
+            android:icon="@mipmap/ic_launcher"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChildAppTheme">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".childapp.ChildPaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChildAppTheme">
+
+        </activity>
+
+        <activity
+            android:name=".childapp.ChildSaveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChildAppTheme">
+
+        </activity>
+        <!-- PARENTS APP -->
+        <activity
+            android:name=".parentsapp.ParentMainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:icon="@mipmap/ic_launcher_parent"
+            android:theme="@style/ParentAppTheme">
+            <intent-filter
+                android:icon="@mipmap/ic_launcher_parent"
+                android:label="Meine Finanzen">
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".parentsapp.NfcRegisterChildActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ParentAppTheme">
+
+        </activity>
+        <activity
+            android:name=".parentsapp.EnterAmountActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/ParentAppTheme">
+        </activity>
+
+        <activity
+            android:name=".parentsapp.ParentDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/ParentAppTheme">
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="at.favre.app.bankathon16"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".network.gcm.GcmIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".network.gcm.GcmIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,2 @@
+INSERT INTO bankathon.user (amount_in_cent, gcm_id, name, restriction, saved_amount, user_type) VALUES (150000, null, 'Parent', null, 0, 0);
+INSERT INTO bankathon.user (amount_in_cent, gcm_id, name, restriction, saved_amount, user_type) VALUES (0, null, 'Claudia', null, 0, 1);
