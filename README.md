@@ -47,7 +47,7 @@ has to release the money.
 
 * Update App through GCM push
 * App-to-App and payment with `android.nfc.action.NDEF_DISCOVERED` nfc communication
-* Server uses Spring Bootstrap & Postgres as 
+* Server uses Spring Boot & Postgres as 
 
 ## Build & Run
 
