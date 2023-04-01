@@ -1,7 +1,7 @@
 
 # My First Wallet #Bankathon16
 
-This is the prototype developed during the "Bankathon16" hackathon hosted by [INSO](https://www.inso.tuwien.ac.at/home/) (Technical University of Vienna). 
+This is the prototype developed during the ["Bankathon16"](https://cashtechthon.inso.tuwien.ac.at/gewinner-2016/) hackathon hosted by [INSO](https://www.inso.tuwien.ac.at/) (Technical University of Vienna). 
 It was a 2 day event, 3 developers worked on the project. This project achieved 2nd place in the ranking.
 
 ![Banner](https://github.com/patrickfav/bankathon16-inso/blob/master/docs/sm/my_first_wallet.png?raw=true)
